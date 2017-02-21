@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A00786BAEC133E60B0C0B22A797280B1FA08C9E4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A00786BAEC133E60B0C0B22A797280B1FA08C9E4" : 9223372036854775807,
+    "2DCEB6FA3DC10468966F31153A936299FCC2BB05" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "213BFC4E-44C7-4B35-AA0D-5C52B1CF3294",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A00786BAEC133E60B0C0B22A797280B1FA08C9E4" : "Wallet_Buddy\/",
+    "2DCEB6FA3DC10468966F31153A936299FCC2BB05" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Wallet_Buddy",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Wallet_Buddy.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kirbec\/College_Profile.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2DCEB6FA3DC10468966F31153A936299FCC2BB05"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kirbec\/Wallet_Buddy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A00786BAEC133E60B0C0B22A797280B1FA08C9E4"
+    }
+  ]
+}
