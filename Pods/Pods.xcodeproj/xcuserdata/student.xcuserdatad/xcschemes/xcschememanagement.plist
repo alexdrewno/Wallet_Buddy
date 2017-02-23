@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>AKPickerView-Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Wallet_Buddy.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Wallet_BuddyTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Wallet_BuddyUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0609866C117C6D66E8BBD0B82E6801F3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7EC1417298041145E9B1A4C7B395C179</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A92CBEBCB480E22DEB6731DB33400A31</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CA373DD84E3C1C891C81AC52F189C3B1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
