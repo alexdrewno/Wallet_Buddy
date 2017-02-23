@@ -14,8 +14,15 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        return UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! CustomCollectionViewCell
         
+        let photo = photos[indexPath.item]
+        
+        cell.cellImage.image = photo
+        //let path = getDocumentsDirectory().appendingPathComponent(person.image)
+        //cell.cellImage.image = UIImage(contentsOfFile: path.path)
+        
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
