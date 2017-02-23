@@ -6,7 +6,6 @@ target 'Wallet_Buddy' do
   use_frameworks!
 
   # Pods for Wallet_Buddy
-  pod "AKPickerView-Swift"
 
   target 'Wallet_BuddyTests' do
     inherit! :search_paths
