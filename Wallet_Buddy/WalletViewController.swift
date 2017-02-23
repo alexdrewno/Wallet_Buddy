@@ -53,4 +53,28 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
         present(imagePicker, animated: true, completion: nil)
     }
     
+    func getDocumentsDirectory() -> URL
+    {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentDirectory = paths[0]
+        return documentDirectory
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any])
+    {
+        guard let image = info[UIImagePickerControllerEditedImage] as? UIImage else {return}
+        
+        let imageName = UUID().uuidString
+        let imagePath = getDocumentsDirectory().appendingPathComponent(imageName)
+        
+        if let jpegData = UIImageJPEGRepresentation(image, 80)
+        {
+            try? jpegData.write(to: imagePath, options: [.atomic])
+        }
+        photos.append(image)
+        collectionView.reloadData()
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
