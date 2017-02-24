@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AKPickerView
 
 class ViewController: UIViewController {
     

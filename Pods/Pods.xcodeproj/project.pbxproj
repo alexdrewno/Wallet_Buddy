@@ -7,50 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1677800BB99396B85406D6C6A37CC992 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		04951AC33F73B9CC92FAA16092FF3B15 /* AKPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC45E800C6F844A099E98A70C6696DD /* AKPickerView.m */; };
+		2030B1A503101DB5F4D10C5B6756B4E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */; };
+		431ED76186EC8EE6627981E587B34CE7 /* AKPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = F37E4F17E89D82F1FD2A6271B64F02BC /* AKPickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6905F9056339F7C7B76548C3D00A10DF /* Pods-Wallet_BuddyUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B97B61560A08E445927651BE206775E /* Pods-Wallet_BuddyUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		69C186EF29FFE1CDE6ED51815A8F8C39 /* Pods-Wallet_Buddy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6D405BB49476E446168F8C2E91897 /* Pods-Wallet_Buddy-dummy.m */; };
 		7256C1BA1F4A114BFD64BA31F3C7C4E8 /* Pods-Wallet_BuddyTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA3443BE9A52A8460A9AF3AA91F3D02 /* Pods-Wallet_BuddyTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		867D4770EF26D73E1DE30D0388EBF469 /* Pods-Wallet_Buddy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 85E2C630F5413407902AC9CF09E3D189 /* Pods-Wallet_Buddy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77A30A3AEAECC0B574F631D9CED60993 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */; };
+		78AE897FCF8A49C3E7C400432EF3BD09 /* AKPickerView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA3D2A5203050F0C3CDC02F2B5A13716 /* AKPickerView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		832E8DA4BC388B06192EBE1224FA05C8 /* Pods-Wallet_Buddy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 85E2C630F5413407902AC9CF09E3D189 /* Pods-Wallet_Buddy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		95B072C457088324A4527C0ECFF525EE /* Pods-Wallet_BuddyUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9064C2BA21E0FE33424A1D6C209CB35F /* Pods-Wallet_BuddyUITests-dummy.m */; };
-		A7971D201EC22764867840764DCB0C03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		ABC876F7B489441FE1EF9759F8FC6A56 /* Pods-Wallet_Buddy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 66A6D405BB49476E446168F8C2E91897 /* Pods-Wallet_Buddy-dummy.m */; };
+		A7971D201EC22764867840764DCB0C03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */; };
 		B9D28CAAA419F9CDDEBEB67B72562554 /* Pods-Wallet_BuddyTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A7FEB37CAAB4A8B4595A60526728DC /* Pods-Wallet_BuddyTests-dummy.m */; };
-		D2E770C00E02B5D1B4CB1CC73C4238B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		CEAD0E70937074261CC87DBE055954E8 /* AKPickerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD757E5C413AE2F2A4205AA326C8A66 /* AKPickerView-dummy.m */; };
+		D2E770C00E02B5D1B4CB1CC73C4238B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */; };
+		EAF5DEACA5D5E0F23E7A0CFC13F46212 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0B5C34B0704CE42DB8ACE437DB6B71 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0DF1FA43E2CE46E20217A95EB829833D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9436BFB5A8CC69A656A84504A1871F3;
+			remoteInfo = AKPickerView;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		01973EA95419FB6F569CE56C34BAB682 /* Pods-Wallet_Buddy-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Wallet_Buddy-frameworks.sh"; sourceTree = "<group>"; };
 		01A7FEB37CAAB4A8B4595A60526728DC /* Pods-Wallet_BuddyTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Wallet_BuddyTests-dummy.m"; sourceTree = "<group>"; };
+		12E0ED7D68D588DFB257BB8D3FB30624 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18C95CCAD073BF85C44210403E690A37 /* AKPickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AKPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A698FC328098004B6EF66EC427EB6E1 /* Pods-Wallet_BuddyUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Wallet_BuddyUITests-frameworks.sh"; sourceTree = "<group>"; };
 		1E65B515C784DA6A690E857943982CB2 /* Pods-Wallet_BuddyTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Wallet_BuddyTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		418BCF4D189E7876C35BB368F0A24C60 /* Pods-Wallet_BuddyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Wallet_BuddyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		464F1E6F7F3EFE12277015CB256F2B03 /* Pods-Wallet_Buddy-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Wallet_Buddy-resources.sh"; sourceTree = "<group>"; };
+		4B648F818DEB703C1DAA3A3884F177EF /* Pods_Wallet_BuddyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wallet_BuddyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B97B61560A08E445927651BE206775E /* Pods-Wallet_BuddyUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Wallet_BuddyUITests-umbrella.h"; sourceTree = "<group>"; };
-		5BFEBD4F8E1E84B0F40E952B9EC34886 /* Pods_Wallet_Buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wallet_Buddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DCED11897DF4463D5B4963B74EC4A40 /* Pods-Wallet_BuddyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Wallet_BuddyTests.release.xcconfig"; sourceTree = "<group>"; };
 		63C7493882497FB4B2080A4947330C66 /* Pods-Wallet_Buddy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Wallet_Buddy.modulemap"; sourceTree = "<group>"; };
 		66A6D405BB49476E446168F8C2E91897 /* Pods-Wallet_Buddy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Wallet_Buddy-dummy.m"; sourceTree = "<group>"; };
 		72BA6443A2D2FD5B66BA99A7C184CF86 /* Pods-Wallet_BuddyUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Wallet_BuddyUITests-resources.sh"; sourceTree = "<group>"; };
 		73C6A1797CB1CE861C0855E44E74DBD6 /* Pods-Wallet_BuddyTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Wallet_BuddyTests-resources.sh"; sourceTree = "<group>"; };
 		74F8E1310D0E0495D20EB788A0837E66 /* Pods-Wallet_BuddyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Wallet_BuddyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		75B7A51816AE3AD616A35DD72314A6A8 /* Pods_Wallet_BuddyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wallet_BuddyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFE75628DC38D9CD3739E3D5B349ED6 /* Pods-Wallet_BuddyTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Wallet_BuddyTests.modulemap"; sourceTree = "<group>"; };
 		7F0872C79814E1A5523C56A6731EF1E0 /* Pods-Wallet_Buddy-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Wallet_Buddy-acknowledgements.plist"; sourceTree = "<group>"; };
 		7F694ADAEBD8F613C8E33A8D4E5F1AF4 /* Pods-Wallet_BuddyUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Wallet_BuddyUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		85E2C630F5413407902AC9CF09E3D189 /* Pods-Wallet_Buddy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Wallet_Buddy-umbrella.h"; sourceTree = "<group>"; };
 		86BB3B511D76BCC3D321D9DA6113084C /* Pods-Wallet_BuddyTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Wallet_BuddyTests-frameworks.sh"; sourceTree = "<group>"; };
+		86C0EB7EFC81E327835A714632BA40C5 /* AKPickerView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AKPickerView-prefix.pch"; sourceTree = "<group>"; };
 		9064C2BA21E0FE33424A1D6C209CB35F /* Pods-Wallet_BuddyUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Wallet_BuddyUITests-dummy.m"; sourceTree = "<group>"; };
+		90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		964258AD3446956ACD9155336962F00E /* Pods_Wallet_BuddyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wallet_BuddyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5E4E0473E0565F711F1974B12A0BDF /* Pods-Wallet_Buddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Wallet_Buddy.debug.xcconfig"; sourceTree = "<group>"; };
+		9E01D743B45968C9431E4A98D64B8661 /* AKPickerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AKPickerView.modulemap; sourceTree = "<group>"; };
 		AC364219E01C4AA35872D9D873F56967 /* Pods-Wallet_BuddyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Wallet_BuddyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B96AE1ECCCCE5048E2C9B213F7C0AF3E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA3D2A5203050F0C3CDC02F2B5A13716 /* AKPickerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AKPickerView-umbrella.h"; sourceTree = "<group>"; };
 		BC2DDB51BE8EC30933623036187D73D1 /* Pods-Wallet_BuddyUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Wallet_BuddyUITests.modulemap"; sourceTree = "<group>"; };
+		BDCFE425D306938FC1D1E72418882A0B /* Pods_Wallet_BuddyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wallet_BuddyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1E19060C3763B9F0F0EF9098120B54 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CB848E9746C34A876050EA9626B67203 /* Pods_Wallet_Buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wallet_Buddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A1C4D2C22D78C2233ABFC441BDAEBD /* Pods-Wallet_BuddyUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Wallet_BuddyUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DAC45E800C6F844A099E98A70C6696DD /* AKPickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AKPickerView.m; path = AKPickerViewSample/AKPickerView/AKPickerView.m; sourceTree = "<group>"; };
 		E377744E8A335FB01A0CCDC125AD2E6F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4E6F651D2EE889A02F208F1BDDE678E /* AKPickerView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AKPickerView.xcconfig; sourceTree = "<group>"; };
 		E81FC167BE1AE9D260A2F9FDBF1369AD /* Pods-Wallet_Buddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Wallet_Buddy.release.xcconfig"; sourceTree = "<group>"; };
+		EB0B5C34B0704CE42DB8ACE437DB6B71 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		EFD757E5C413AE2F2A4205AA326C8A66 /* AKPickerView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AKPickerView-dummy.m"; sourceTree = "<group>"; };
+		F37E4F17E89D82F1FD2A6271B64F02BC /* AKPickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AKPickerView.h; path = AKPickerViewSample/AKPickerView/AKPickerView.h; sourceTree = "<group>"; };
 		FAA3443BE9A52A8460A9AF3AA91F3D02 /* Pods-Wallet_BuddyTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Wallet_BuddyTests-umbrella.h"; sourceTree = "<group>"; };
 		FB0178283634BE3D4FDC5C1FB868B7F3 /* Pods-Wallet_BuddyTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Wallet_BuddyTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		FDDDFAB2FBD7DE427ED57806F0505A2A /* Pods-Wallet_Buddy-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Wallet_Buddy-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -65,11 +91,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		763847A1A110FD1CD2A012BBEB0683C3 /* Frameworks */ = {
+		608A53A59AD77FCC05F4D92EF6CC80A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1677800BB99396B85406D6C6A37CC992 /* Foundation.framework in Frameworks */,
+				77A30A3AEAECC0B574F631D9CED60993 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E51901E73CC2EA0FDE383866A8BB20AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2030B1A503101DB5F4D10C5B6756B4E2 /* Foundation.framework in Frameworks */,
+				EAF5DEACA5D5E0F23E7A0CFC13F46212 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,16 +119,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		19982EBDF85226160A53B9A6EFB6212F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5BFEBD4F8E1E84B0F40E952B9EC34886 /* Pods_Wallet_Buddy.framework */,
-				964258AD3446956ACD9155336962F00E /* Pods_Wallet_BuddyTests.framework */,
-				75B7A51816AE3AD616A35DD72314A6A8 /* Pods_Wallet_BuddyUITests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		306A50A1605B4099A46E1879363A1148 /* Pods-Wallet_Buddy */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,14 +137,6 @@
 			path = "Target Support Files/Pods-Wallet_Buddy";
 			sourceTree = "<group>";
 		};
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		41C64059B071EB0DB15FA63A0D2A9574 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +145,47 @@
 				7780789048BAC17B8FD60D1E1FCEEA6D /* Pods-Wallet_BuddyUITests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89F803C7E2D77E11F2120CB28FE0B795 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		44566BEB753A389C142CD6CDDD0F3D97 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF920ED21AF7BA0693D581C59BBEF4A2 /* AKPickerView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		67174C7149337DE174FFAA584E5CD101 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9E01D743B45968C9431E4A98D64B8661 /* AKPickerView.modulemap */,
+				E4E6F651D2EE889A02F208F1BDDE678E /* AKPickerView.xcconfig */,
+				EFD757E5C413AE2F2A4205AA326C8A66 /* AKPickerView-dummy.m */,
+				86C0EB7EFC81E327835A714632BA40C5 /* AKPickerView-prefix.pch */,
+				BA3D2A5203050F0C3CDC02F2B5A13716 /* AKPickerView-umbrella.h */,
+				12E0ED7D68D588DFB257BB8D3FB30624 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AKPickerView";
+			sourceTree = "<group>";
+		};
+		6CF354D35FF3F1D89AD1B99E25B98204 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18C95CCAD073BF85C44210403E690A37 /* AKPickerView.framework */,
+				CB848E9746C34A876050EA9626B67203 /* Pods_Wallet_Buddy.framework */,
+				BDCFE425D306938FC1D1E72418882A0B /* Pods_Wallet_BuddyTests.framework */,
+				4B648F818DEB703C1DAA3A3884F177EF /* Pods_Wallet_BuddyUITests.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		7780789048BAC17B8FD60D1E1FCEEA6D /* Pods-Wallet_BuddyUITests */ = {
@@ -152,10 +210,20 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				19982EBDF85226160A53B9A6EFB6212F /* Products */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				44566BEB753A389C142CD6CDDD0F3D97 /* Pods */,
+				6CF354D35FF3F1D89AD1B99E25B98204 /* Products */,
 				41C64059B071EB0DB15FA63A0D2A9574 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		89F803C7E2D77E11F2120CB28FE0B795 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */,
+				EB0B5C34B0704CE42DB8ACE437DB6B71 /* QuartzCore.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		A220F63DFD24C6BAAEBDD5430051C5BC /* Pods-Wallet_BuddyTests */ = {
@@ -176,12 +244,14 @@
 			path = "Target Support Files/Pods-Wallet_BuddyTests";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		FF920ED21AF7BA0693D581C59BBEF4A2 /* AKPickerView */ = {
 			isa = PBXGroup;
 			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+				F37E4F17E89D82F1FD2A6271B64F02BC /* AKPickerView.h */,
+				DAC45E800C6F844A099E98A70C6696DD /* AKPickerView.m */,
+				67174C7149337DE174FFAA584E5CD101 /* Support Files */,
 			);
-			name = Frameworks;
+			path = AKPickerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,19 +265,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		293B725039D3E074F2C50A08EB640232 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				867D4770EF26D73E1DE30D0388EBF469 /* Pods-Wallet_Buddy-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A7A809C7A577628DA84C94427CE2219E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7256C1BA1F4A114BFD64BA31F3C7C4E8 /* Pods-Wallet_BuddyTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD335DEB578D3A6C8C0B28A1784DE510 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78AE897FCF8A49C3E7C400432EF3BD09 /* AKPickerView-umbrella.h in Headers */,
+				431ED76186EC8EE6627981E587B34CE7 /* AKPickerView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E365A8A0A820D2EDB4F978331721F71E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832E8DA4BC388B06192EBE1224FA05C8 /* Pods-Wallet_Buddy-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,24 +307,25 @@
 			);
 			name = "Pods-Wallet_BuddyTests";
 			productName = "Pods-Wallet_BuddyTests";
-			productReference = 964258AD3446956ACD9155336962F00E /* Pods_Wallet_BuddyTests.framework */;
+			productReference = BDCFE425D306938FC1D1E72418882A0B /* Pods_Wallet_BuddyTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		37321373DA4ECE1AAED7BD2D67132AC7 /* Pods-Wallet_Buddy */ = {
+		803BEA5FD2F467EA638F1A064F625306 /* Pods-Wallet_Buddy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8F74E5686D2F88ADDB4217F65124C5F8 /* Build configuration list for PBXNativeTarget "Pods-Wallet_Buddy" */;
+			buildConfigurationList = C9EBD4F43FB38E31C45B17632E78CFEE /* Build configuration list for PBXNativeTarget "Pods-Wallet_Buddy" */;
 			buildPhases = (
-				6A84BE09422D3BA2DD554C2B011FAD58 /* Sources */,
-				763847A1A110FD1CD2A012BBEB0683C3 /* Frameworks */,
-				293B725039D3E074F2C50A08EB640232 /* Headers */,
+				8006D6B5B870BC79CD8F6209EC7D89CD /* Sources */,
+				608A53A59AD77FCC05F4D92EF6CC80A7 /* Frameworks */,
+				E365A8A0A820D2EDB4F978331721F71E /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				930BFCD9615ABBBB2A0B5F89CC4007CB /* PBXTargetDependency */,
 			);
 			name = "Pods-Wallet_Buddy";
 			productName = "Pods-Wallet_Buddy";
-			productReference = 5BFEBD4F8E1E84B0F40E952B9EC34886 /* Pods_Wallet_Buddy.framework */;
+			productReference = CB848E9746C34A876050EA9626B67203 /* Pods_Wallet_Buddy.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A92CBEBCB480E22DEB6731DB33400A31 /* Pods-Wallet_BuddyUITests */ = {
@@ -262,7 +342,24 @@
 			);
 			name = "Pods-Wallet_BuddyUITests";
 			productName = "Pods-Wallet_BuddyUITests";
-			productReference = 75B7A51816AE3AD616A35DD72314A6A8 /* Pods_Wallet_BuddyUITests.framework */;
+			productReference = 4B648F818DEB703C1DAA3A3884F177EF /* Pods_Wallet_BuddyUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E9436BFB5A8CC69A656A84504A1871F3 /* AKPickerView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 08FC914CC4F615AD54F4083170276472 /* Build configuration list for PBXNativeTarget "AKPickerView" */;
+			buildPhases = (
+				070F9EF7112AC6FB474E2C0B589F38EE /* Sources */,
+				E51901E73CC2EA0FDE383866A8BB20AA /* Frameworks */,
+				DD335DEB578D3A6C8C0B28A1784DE510 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AKPickerView;
+			productName = AKPickerView;
+			productReference = 18C95CCAD073BF85C44210403E690A37 /* AKPickerView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -282,11 +379,12 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 19982EBDF85226160A53B9A6EFB6212F /* Products */;
+			productRefGroup = 6CF354D35FF3F1D89AD1B99E25B98204 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				37321373DA4ECE1AAED7BD2D67132AC7 /* Pods-Wallet_Buddy */,
+				E9436BFB5A8CC69A656A84504A1871F3 /* AKPickerView */,
+				803BEA5FD2F467EA638F1A064F625306 /* Pods-Wallet_Buddy */,
 				0609866C117C6D66E8BBD0B82E6801F3 /* Pods-Wallet_BuddyTests */,
 				A92CBEBCB480E22DEB6731DB33400A31 /* Pods-Wallet_BuddyUITests */,
 			);
@@ -294,6 +392,15 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		070F9EF7112AC6FB474E2C0B589F38EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEAD0E70937074261CC87DBE055954E8 /* AKPickerView-dummy.m in Sources */,
+				04951AC33F73B9CC92FAA16092FF3B15 /* AKPickerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		11EE81A3FEE619BE76A2757EBDD64F04 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -310,51 +417,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A84BE09422D3BA2DD554C2B011FAD58 /* Sources */ = {
+		8006D6B5B870BC79CD8F6209EC7D89CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABC876F7B489441FE1EF9759F8FC6A56 /* Pods-Wallet_Buddy-dummy.m in Sources */,
+				69C186EF29FFE1CDE6ED51815A8F8C39 /* Pods-Wallet_Buddy-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin XCBuildConfiguration section */
-		034BCA29288C5BF3E5A346E19E7593D6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A5E4E0473E0565F711F1974B12A0BDF /* Pods-Wallet_Buddy.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Wallet_Buddy/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Wallet_Buddy/Pods-Wallet_Buddy.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Wallet_Buddy;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
+/* Begin PBXTargetDependency section */
+		930BFCD9615ABBBB2A0B5F89CC4007CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AKPickerView;
+			target = E9436BFB5A8CC69A656A84504A1871F3 /* AKPickerView */;
+			targetProxy = 0DF1FA43E2CE46E20217A95EB829833D /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
 		12AC0BEBDA07791EB2D9A08B69B5DF29 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AC364219E01C4AA35872D9D873F56967 /* Pods-Wallet_BuddyUITests.debug.xcconfig */;
@@ -423,6 +505,40 @@
 			};
 			name = Release;
 		};
+		40703ACF8CF2BF2555364A630B032127 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E81FC167BE1AE9D260A2F9FDBF1369AD /* Pods-Wallet_Buddy.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Wallet_Buddy/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Wallet_Buddy/Pods-Wallet_Buddy.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Wallet_Buddy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		42287DDF97330524BA3EF220F0276DA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -461,13 +577,43 @@
 			};
 			name = Release;
 		};
-		443E3D515ACB236A39C81545C6A99170 /* Release */ = {
+		50B6D6CEF8B739AB46BA5150A8EA7A7F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E81FC167BE1AE9D260A2F9FDBF1369AD /* Pods-Wallet_Buddy.release.xcconfig */;
+			baseConfigurationReference = E4E6F651D2EE889A02F208F1BDDE678E /* AKPickerView.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AKPickerView/AKPickerView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AKPickerView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AKPickerView/AKPickerView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AKPickerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		538E079526BFCD6734122167EC2AC151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A5E4E0473E0565F711F1974B12A0BDF /* Pods-Wallet_Buddy.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -480,7 +626,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Wallet_Buddy/Pods-Wallet_Buddy.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -493,7 +639,7 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		5F5876333FFD8093ED715D3F81B36573 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -571,6 +717,36 @@
 			};
 			name = Debug;
 		};
+		CCBEB430D11080171923522DF06908F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4E6F651D2EE889A02F208F1BDDE678E /* AKPickerView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AKPickerView/AKPickerView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AKPickerView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AKPickerView/AKPickerView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = AKPickerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		DFFD4444FB328A1EAA397AC13A937FD5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 418BCF4D189E7876C35BB368F0A24C60 /* Pods-Wallet_BuddyUITests.release.xcconfig */;
@@ -608,20 +784,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		08FC914CC4F615AD54F4083170276472 /* Build configuration list for PBXNativeTarget "AKPickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCBEB430D11080171923522DF06908F2 /* Debug */,
+				50B6D6CEF8B739AB46BA5150A8EA7A7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE9439C22469D35336242DD983DB5C5F /* Debug */,
 				42287DDF97330524BA3EF220F0276DA6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8F74E5686D2F88ADDB4217F65124C5F8 /* Build configuration list for PBXNativeTarget "Pods-Wallet_Buddy" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				034BCA29288C5BF3E5A346E19E7593D6 /* Debug */,
-				443E3D515ACB236A39C81545C6A99170 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -640,6 +816,15 @@
 			buildConfigurations = (
 				12AC0BEBDA07791EB2D9A08B69B5DF29 /* Debug */,
 				DFFD4444FB328A1EAA397AC13A937FD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9EBD4F43FB38E31C45B17632E78CFEE /* Build configuration list for PBXNativeTarget "Pods-Wallet_Buddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				538E079526BFCD6734122167EC2AC151 /* Debug */,
+				40703ACF8CF2BF2555364A630B032127 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

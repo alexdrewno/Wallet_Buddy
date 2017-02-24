@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AKPickerView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Wallet_Buddy.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +32,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>37321373DA4ECE1AAED7BD2D67132AC7</key>
+		<key>803BEA5FD2F467EA638F1A064F625306</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>A92CBEBCB480E22DEB6731DB33400A31</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E9436BFB5A8CC69A656A84504A1871F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

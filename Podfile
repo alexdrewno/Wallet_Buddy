@@ -4,8 +4,8 @@
 target 'Wallet_Buddy' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-
   # Pods for Wallet_Buddy
+  pod “AKPickerView”
 
   target 'Wallet_BuddyTests' do
     inherit! :search_paths
