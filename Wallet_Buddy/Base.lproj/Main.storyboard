@@ -86,6 +86,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="lp3-M6-3zc" id="YZ0-ti-eqh"/>
+                        <outlet property="pickerViewFrame" destination="hM8-0g-iBW" id="ak1-B5-5X7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RDt-oB-Xid" userLabel="First Responder" sceneMemberID="firstResponder"/>

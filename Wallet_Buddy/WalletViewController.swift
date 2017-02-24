@@ -1,15 +1,47 @@
 import UIKit
-class WalletViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate
+import AKPickerView
+
+class WalletViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, AKPickerViewDelegate, AKPickerViewDataSource
 {
     @IBOutlet var collectionView: UICollectionView!
     var photos : [UIImage] = []
     var imagePicker = UIImagePickerController()
+    @IBOutlet var pickerViewFrame: UIView!
+    var pickerView: AKPickerView!
     
     override func viewDidLoad() {
         collectionView.delegate = self
         collectionView.dataSource = self
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
+        self.pickerView = AKPickerView(frame: pickerViewFrame.frame)
+        self.pickerView.delegate = self
+        self.pickerView.dataSource = self
+    
+        self.view.addSubview(pickerView)
+        
+        self.pickerView.font = UIFont(name: "HelveticaNeue-Light", size: 45)!
+        self.pickerView.highlightedFont = UIFont(name: "HelveticaNeue", size: 45)!
+        self.pickerView.pickerViewStyle = .style3D
+        self.pickerView.isMaskDisabled = false
+        self.pickerView.interitemSpacing = 25
+        self.pickerView.reloadData()
+    }
+    
+    func pickerView(_ pickerView: AKPickerView!, didSelectItem item: Int) {
+        
+    }
+    
+    func pickerView(_ pickerView: AKPickerView!, configureLabel label: UILabel!, forItem item: Int) {
+        
+    }
+    
+    func pickerView(_ pickerView: AKPickerView!, titleForItem item: Int) -> String! {
+        return "hello"
+    }
+    
+    func numberOfItems(in pickerView: AKPickerView!) -> UInt {
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
