@@ -8,6 +8,7 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
     var imagePicker = UIImagePickerController()
     @IBOutlet var pickerViewFrame: UIView!
     var pickerView: AKPickerView!
+    var categoryNames : [String] = ["IDs"]
     
     override func viewDidLoad() {
         collectionView.delegate = self
@@ -37,11 +38,11 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func pickerView(_ pickerView: AKPickerView!, titleForItem item: Int) -> String! {
-        return "hello"
+        return categoryNames[item]
     }
     
     func numberOfItems(in pickerView: AKPickerView!) -> UInt {
-        return 3
+        return UInt(categoryNames.count)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
@@ -64,12 +65,26 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     @IBAction func addPhoto(_ sender: AnyObject)
     {
+        let ac = UIAlertController(title: "Name The Category", message: nil, preferredStyle: .alert)
+        ac.addTextField()
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        ac.addAction(UIAlertAction(title: "Ok", style: .default, handler: { [unowned self, ac] _ in
+            let newName = ac.textFields![0]
+            self.categoryNames.append(newName.text!)
+            self.pickerView.reloadData()
+            self.collectionView.reloadData()
+            //self.save()
+        }))
+        
         let addPic = UIAlertController(title: "Add a new photo", message: "", preferredStyle: .alert)
         addPic.addAction(UIAlertAction(title: "Choose Photo", style: .default, handler: { (action) in
             self.presentPhotoPicker(false)
         }))
         addPic.addAction(UIAlertAction(title: "Take Photo", style: .default, handler: { (action) in
             self.presentPhotoPicker(true)
+        }))
+        addPic.addAction(UIAlertAction(title: "Add New Category", style: .default, handler: { (action) in
+            self.present(ac, animated: true)
         }))
         addPic.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(addPic, animated: true, completion: nil)
