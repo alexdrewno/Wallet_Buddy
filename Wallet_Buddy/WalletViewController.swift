@@ -4,11 +4,11 @@ import AKPickerView
 class WalletViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, AKPickerViewDelegate, AKPickerViewDataSource
 {
     @IBOutlet var collectionView: UICollectionView!
-    var photos : [UIImage] = []
     var imagePicker = UIImagePickerController()
     @IBOutlet var pickerViewFrame: UIView!
     var pickerView: AKPickerView!
-    var categoryNames : [String] = ["IDs"]
+    var categoryDictionary : [String : [UIImage]] = ["IDs" : []]
+    var selectedKey = ""
     
     override func viewDidLoad() {
         collectionView.delegate = self
@@ -27,9 +27,12 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
         self.pickerView.isMaskDisabled = false
         self.pickerView.interitemSpacing = 25
         self.pickerView.reloadData()
+        self.selectedKey = (categoryDictionary as NSDictionary).allKeys[0] as! String
     }
     
     func pickerView(_ pickerView: AKPickerView!, didSelectItem item: Int) {
+        
+        collectionView.reloadData()
         
     }
     
@@ -38,20 +41,30 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func pickerView(_ pickerView: AKPickerView!, titleForItem item: Int) -> String! {
-        return categoryNames[item]
+        selectedKey = (categoryDictionary as NSDictionary).allKeys[item] as! String
+        return (categoryDictionary as NSDictionary).allKeys[item] as! String
     }
     
     func numberOfItems(in pickerView: AKPickerView!) -> UInt {
-        return UInt(categoryNames.count)
+        return UInt(categoryDictionary.count)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! CustomCollectionViewCell
         
-        let photo = photos[indexPath.item]
+        if let imageArray = categoryDictionary[selectedKey]
+        {
+            let photo = imageArray[indexPath.row]
+            cell.cellImage.image = photo
+        }
+        else
+        {
+            print("couldn't find key \(selectedKey)")
+        }
         
-        cell.cellImage.image = photo
+        
+
         //let path = getDocumentsDirectory().appendingPathComponent(person.image)
         //cell.cellImage.image = UIImage(contentsOfFile: path.path)
         
@@ -60,7 +73,7 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return photos.count
+        return categoryDictionary[selectedKey]!.count
     }
     
     @IBAction func addPhoto(_ sender: AnyObject)
@@ -70,7 +83,7 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         ac.addAction(UIAlertAction(title: "Ok", style: .default, handler: { [unowned self, ac] _ in
             let newName = ac.textFields![0]
-            self.categoryNames.append(newName.text!)
+            self.categoryDictionary[newName.text!] = []
             self.pickerView.reloadData()
             self.collectionView.reloadData()
             //self.save()
@@ -118,7 +131,7 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
         {
             try? jpegData.write(to: imagePath, options: [.atomic])
         }
-        photos.append(image)
+        categoryDictionary[selectedKey]!.append(image)
         collectionView.reloadData()
         
         dismiss(animated: true, completion: nil)
