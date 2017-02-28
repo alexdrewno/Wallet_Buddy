@@ -10,7 +10,14 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
     var categoryDictionary : [String : [UIImage]] = ["IDs" : []]
     var selectedKey = ""
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
+        let defaults = UserDefaults.standard
+        if let savedCategories = defaults.object(forKey: "categories") as? Data
+        {
+            categoryDictionary = NSKeyedUnarchiver.unarchiveObject(with: savedCategories) as! [String : [UIImage]]
+        }
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         imagePicker.delegate = self
@@ -74,6 +81,21 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
         return categoryDictionary[selectedKey]!.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        let ac = UIAlertController(title: "Remove Photo?", message: nil, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Delete", style: .default, handler:
+            {
+                (action:UIAlertAction!) -> Void in
+                self.categoryDictionary[self.selectedKey]?.remove(at: indexPath.item)
+                self.collectionView.deleteItems(at: [indexPath])
+                self.collectionView.reloadData()
+                self.save()
+        }))
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(ac, animated : true)
+    }
+    
     @IBAction func addPhoto(_ sender: AnyObject)
     {
         let ac = UIAlertController(title: "Name The Category", message: nil, preferredStyle: .alert)
@@ -84,7 +106,7 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
             self.categoryDictionary[newName.text!] = []
             self.pickerView.reloadData()
             self.collectionView.reloadData()
-            //self.save()
+            self.save()
         }))
         
         let addPic = UIAlertController(title: "Add a new photo", message: "", preferredStyle: .alert)
@@ -131,8 +153,17 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
         }
         categoryDictionary[selectedKey]!.append(image)
         collectionView.reloadData()
+        save()
         
         dismiss(animated: true, completion: nil)
     }
     
+    func save()
+    {
+        //NSKeyedArchiver converts array into a data object
+        let savedData = NSKeyedArchiver.archivedData(withRootObject: categoryDictionary)
+        
+        let defaults = UserDefaults.standard
+        defaults.set(savedData, forKey: "categories")
+    }
 }
