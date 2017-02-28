@@ -31,12 +31,7 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func pickerView(_ pickerView: AKPickerView!, didSelectItem item: Int) {
-<<<<<<< HEAD
-=======
-        
         collectionView.reloadData()
-        
->>>>>>> origin/master
     }
     
     func pickerView(_ pickerView: AKPickerView!, configureLabel label: UILabel!, forItem item: Int) {
