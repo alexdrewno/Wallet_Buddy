@@ -8,25 +8,33 @@
 
 import UIKit
 import AKPickerView
+import LocalAuthentication
 
-class ViewController: UIViewController {
-    
-    
-
-    override func viewDidLoad() {
+class ViewController: UIViewController
+{
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        performSegue(withIdentifier: "authorized", sender: self)
+    override func viewDidAppear(_ animated: Bool)
+    {
+        //performSegue(withIdentifier: "authorized", sender: self)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func onButtonPress(_ sender: Any)
+    {
+        let context: LAContext = LAContext()
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
+        {
+            context.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Touch ID", reply:
+                {(wasSuccessful, error) in
+                    if UIAccessibilityAnnouncementKeyWasSuccessful
+                    {
+                        self.performSegue(withIdentifier: "authorized", sender: self)
+                    }
+            })
+        }
     }
-
-
 }
 

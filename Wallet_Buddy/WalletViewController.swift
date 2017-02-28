@@ -30,7 +30,6 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func pickerView(_ pickerView: AKPickerView!, didSelectItem item: Int) {
-        
     }
     
     func pickerView(_ pickerView: AKPickerView!, configureLabel label: UILabel!, forItem item: Int) {
