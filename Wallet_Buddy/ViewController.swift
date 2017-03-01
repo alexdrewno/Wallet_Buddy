@@ -19,7 +19,7 @@ class ViewController: UIViewController
     
     override func viewDidAppear(_ animated: Bool)
     {
-        //performSegue(withIdentifier: "authorized", sender: self)
+        performSegue(withIdentifier: "authorized", sender: self)
     }
     @IBAction func onButtonPress(_ sender: Any)
     {
@@ -29,9 +29,13 @@ class ViewController: UIViewController
         {
             context.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Touch ID", reply:
                 {(wasSuccessful, error) in
-                    if UIAccessibilityAnnouncementKeyWasSuccessful
+                    if wasSuccessful
                     {
                         self.performSegue(withIdentifier: "authorized", sender: self)
+                    }
+                    else
+                    {
+                        print(error?.localizedDescription)
                     }
             })
         }
