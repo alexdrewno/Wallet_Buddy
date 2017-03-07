@@ -184,7 +184,7 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func barTrashTap(_ sender: Any) {
+    @IBAction func barTrashTap(_ sender: UIBarButtonItem) {
         let ac = UIAlertController(title: "Delete:", message: nil, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "All Photos", style: .default, handler:
             {
