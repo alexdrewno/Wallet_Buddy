@@ -47,7 +47,7 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func pickerView(_ pickerView: AKPickerView!, titleForItem item: Int) -> String! {
         selectedKey = (categoryDictionary as NSDictionary).allKeys[item] as! String
-        return (categoryDictionary as NSDictionary).allKeys[item] as! String
+        return selectedKey
     }
     
     func numberOfItems(in pickerView: AKPickerView!) -> UInt {
@@ -156,6 +156,26 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
         save()
         
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func barTrashTap(_ sender: Any) {
+        let ac = UIAlertController(title: "Delete:", message: nil, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "All Photos", style: .default, handler:
+            {
+                (action:UIAlertAction!) -> Void in
+                self.categoryDictionary[self.selectedKey]?.removeAll()
+                self.collectionView.reloadData()
+                self.save()
+        }))
+        ac.addAction(UIAlertAction(title: "Category", style: .default, handler:
+            {
+                (action:UIAlertAction!) -> Void in
+                //Need something here
+                self.collectionView.reloadData()
+                self.save()
+        }))
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(ac, animated : true)
     }
     
     func save()

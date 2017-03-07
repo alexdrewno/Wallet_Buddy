@@ -89,6 +89,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="134"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.71725063131313127" green="0.71725063131313127" blue="0.71725063131313127" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -97,6 +98,11 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="eiH-bh-nTA">
                             <connections>
                                 <action selector="addPhoto:" destination="0hA-3F-XRV" id="5sU-Bi-rKE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="kdE-yi-84x">
+                            <connections>
+                                <action selector="barTrashTap:" destination="0hA-3F-XRV" id="r3V-H3-YHe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
