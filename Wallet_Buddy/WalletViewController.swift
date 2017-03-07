@@ -39,7 +39,14 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
 //        self.collectionView.reloadData()
 //        self.save()
         self.selectedKey = (categoryDictionary as NSDictionary).allKeys[0] as! String
-        
+        let screenSize : CGRect = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
+        layout.itemSize = CGSize(width: screenWidth/3, height: 180)
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        collectionView!.collectionViewLayout = layout
     }
     
     func pickerView(_ pickerView: AKPickerView!, didSelectItem item: Int) {
@@ -79,7 +86,6 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
 
         //let path = getDocumentsDirectory().appendingPathComponent(person.image)
         //cell.cellImage.image = UIImage(contentsOfFile: path.path)
-        
         return cell
     }
     
@@ -94,7 +100,7 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        let ac = UIAlertController(title: "Remove Photo?", message: nil, preferredStyle: .alert)
+        let ac = UIAlertController(title: "Remove or Share", message: nil, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Delete", style: .default, handler:
             {
                 (action:UIAlertAction!) -> Void in
@@ -102,6 +108,15 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
                 self.collectionView.deleteItems(at: [indexPath])
                 self.collectionView.reloadData()
                 self.save()
+        }))
+        ac.addAction(UIAlertAction(title: "Share", style: .default, handler:
+            {
+                (action:UIAlertAction!) -> Void in
+                let imageToShare = [self.categoryDictionary[self.selectedKey]?[indexPath.item]]
+                let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+                activityViewController.popoverPresentationController?.sourceView = self.view
+                activityViewController.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.postToFacebook]
+                self.present(activityViewController, animated: true, completion: nil)
         }))
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(ac, animated : true)
