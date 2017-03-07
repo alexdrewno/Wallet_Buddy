@@ -195,29 +195,33 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
         }))
         ac.addAction(UIAlertAction(title: "Category", style: .default, handler:
             {
-                (action:UIAlertAction!) -> Void in                
-                let index = (self.categoryDictionary as NSDictionary).allKeys.index(where: { (item) -> Bool in
-                    item as! String == self.selectedKey
-                })
-                print(index!)
+                (action:UIAlertAction!) -> Void in
                 
-                print(self.categoryDictionary.removeValue(forKey: self.selectedKey) == nil)
-                
-                var newIndex = 0
-                if index != 0{
-                    newIndex = index!-1
-                    self.selectedKey = (self.categoryDictionary as NSDictionary).allKeys[newIndex] as! String
-                    self.pickerView.selectItem(UInt(newIndex), animated: true)
-                }
-                else
+                if selectedKey != ""
                 {
-                    self.selectedKey = ""
-                }
-                print(self.selectedKey)
-                
-                self.collectionView.reloadData()
-                self.pickerView.reloadData()
-                self.save()
+                    let index = (self.categoryDictionary as NSDictionary).allKeys.index(where: { (item) -> Bool in
+                        item as! String == self.selectedKey
+                    })
+                    print(index!)
+                    
+                    print(self.categoryDictionary.removeValue(forKey: self.selectedKey) == nil)
+                    
+                    var newIndex = 0
+                    if index != 0{
+                        newIndex = index!-1
+                        self.selectedKey = (self.categoryDictionary as NSDictionary).allKeys[newIndex] as! String
+                        self.pickerView.selectItem(UInt(newIndex), animated: true)
+                    }
+                    else
+                    {
+                        self.selectedKey = ""
+                    }
+                    print(self.selectedKey)
+                    
+                    self.collectionView.reloadData()
+                    self.pickerView.reloadData()
+                    self.save()
+            }
         }))
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         present(ac, animated : true)
