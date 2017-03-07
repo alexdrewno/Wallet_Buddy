@@ -38,7 +38,14 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
 //        self.pickerView.reloadData()
 //        self.collectionView.reloadData()
 //        self.save()
-        self.selectedKey = (categoryDictionary as NSDictionary).allKeys[0] as! String
+        if (categoryDictionary as NSDictionary).allKeys.count != 0
+        {
+            self.selectedKey = (categoryDictionary as NSDictionary).allKeys[0] as! String
+        }
+        else
+        {
+            self.selectedKey == ""
+        }
         let screenSize : CGRect = UIScreen.main.bounds
         let screenWidth = screenSize.width
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -197,7 +204,7 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
             {
                 (action:UIAlertAction!) -> Void in
                 
-                if selectedKey != ""
+                if self.selectedKey != ""
                 {
                     let index = (self.categoryDictionary as NSDictionary).allKeys.index(where: { (item) -> Bool in
                         item as! String == self.selectedKey
