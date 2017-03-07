@@ -10,7 +10,14 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
     var categoryDictionary : [String : [UIImage]] = ["IDs" : []]
     var selectedKey = ""
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
+        let defaults = UserDefaults.standard
+        if let savedCategories = defaults.object(forKey: "categories") as? Data
+        {
+            categoryDictionary = NSKeyedUnarchiver.unarchiveObject(with: savedCategories) as! [String : [UIImage]]
+        }
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         imagePicker.delegate = self
@@ -27,13 +34,18 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
         self.pickerView.isMaskDisabled = false
         self.pickerView.interitemSpacing = 25
         self.pickerView.reloadData()
+//        self.categoryDictionary["IDs"] = []
+//        self.pickerView.reloadData()
+//        self.collectionView.reloadData()
+//        self.save()
         self.selectedKey = (categoryDictionary as NSDictionary).allKeys[0] as! String
+        
     }
     
     func pickerView(_ pickerView: AKPickerView!, didSelectItem item: Int) {
         
         collectionView.reloadData()
-        
+
     }
     
     func pickerView(_ pickerView: AKPickerView!, configureLabel label: UILabel!, forItem item: Int) {
@@ -42,7 +54,7 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func pickerView(_ pickerView: AKPickerView!, titleForItem item: Int) -> String! {
         selectedKey = (categoryDictionary as NSDictionary).allKeys[item] as! String
-        return (categoryDictionary as NSDictionary).allKeys[item] as! String
+        return selectedKey
     }
     
     func numberOfItems(in pickerView: AKPickerView!) -> UInt {
@@ -73,7 +85,26 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
+        if selectedKey == ""
+        {
+            return 0
+        }
         return categoryDictionary[selectedKey]!.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        let ac = UIAlertController(title: "Remove Photo?", message: nil, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Delete", style: .default, handler:
+            {
+                (action:UIAlertAction!) -> Void in
+                self.categoryDictionary[self.selectedKey]?.remove(at: indexPath.item)
+                self.collectionView.deleteItems(at: [indexPath])
+                self.collectionView.reloadData()
+                self.save()
+        }))
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(ac, animated : true)
     }
     
     @IBAction func addPhoto(_ sender: AnyObject)
@@ -86,7 +117,7 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
             self.categoryDictionary[newName.text!] = []
             self.pickerView.reloadData()
             self.collectionView.reloadData()
-            //self.save()
+            self.save()
         }))
         
         let addPic = UIAlertController(title: "Add a new photo", message: "", preferredStyle: .alert)
@@ -133,8 +164,58 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
         }
         categoryDictionary[selectedKey]!.append(image)
         collectionView.reloadData()
+        save()
         
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func barTrashTap(_ sender: Any) {
+        let ac = UIAlertController(title: "Delete:", message: nil, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "All Photos", style: .default, handler:
+            {
+                (action:UIAlertAction!) -> Void in
+                self.categoryDictionary[self.selectedKey]?.removeAll()
+                self.collectionView.reloadData()
+                self.save()
+        }))
+        ac.addAction(UIAlertAction(title: "Category", style: .default, handler:
+            {
+                (action:UIAlertAction!) -> Void in
+                //Need something here
+                
+                let index = (self.categoryDictionary as NSDictionary).allKeys.index(where: { (item) -> Bool in
+                    item as! String == self.selectedKey
+                })
+                print(index!)
+                
+                print(self.categoryDictionary.removeValue(forKey: self.selectedKey) == nil)
+                
+                var newIndex = 0
+                if index != 0{
+                    newIndex = index!-1
+                    self.selectedKey = (self.categoryDictionary as NSDictionary).allKeys[newIndex] as! String
+                    self.pickerView.selectItem(UInt(newIndex), animated: true)
+                }
+                else
+                {
+                    self.selectedKey = ""
+                }
+                print(self.selectedKey)
+                
+                self.collectionView.reloadData()
+                self.pickerView.reloadData()
+                self.save()
+        }))
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(ac, animated : true)
+    }
+    
+    func save()
+    {
+        //NSKeyedArchiver converts array into a data object
+        let savedData = NSKeyedArchiver.archivedData(withRootObject: categoryDictionary)
+        
+        let defaults = UserDefaults.standard
+        defaults.set(savedData, forKey: "categories")
+    }
 }
