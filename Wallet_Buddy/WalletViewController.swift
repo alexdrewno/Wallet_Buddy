@@ -195,9 +195,7 @@ class WalletViewController: UIViewController, UICollectionViewDelegate, UICollec
         }))
         ac.addAction(UIAlertAction(title: "Category", style: .default, handler:
             {
-                (action:UIAlertAction!) -> Void in
-                //Need something here
-                
+                (action:UIAlertAction!) -> Void in                
                 let index = (self.categoryDictionary as NSDictionary).allKeys.index(where: { (item) -> Bool in
                     item as! String == self.selectedKey
                 })
