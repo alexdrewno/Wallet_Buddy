@@ -19,10 +19,6 @@ class ViewController: UIViewController
     
     override func viewDidAppear(_ animated: Bool)
     {
-        performSegue(withIdentifier: "authorized", sender: self)
-    }
-    @IBAction func onButtonPress(_ sender: Any)
-    {
         let context: LAContext = LAContext()
         
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
@@ -39,6 +35,8 @@ class ViewController: UIViewController
                     }
             })
         }
+
     }
+    
 }
 
